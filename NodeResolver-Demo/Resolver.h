@@ -9,8 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface Resolver : NSObject
 
+@property (nonatomic, strong) NSString *body;
+
+- (void)readWithQuery:(NSString *)quert encoding:(nullable NSString *)encoding;
 @end
 
 NS_ASSUME_NONNULL_END
