@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EBF4F4802BFC7B9F00210998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4F47F2BFC7B9F00210998 /* AppDelegate.swift */; };
-		EBF4F4822BFC7B9F00210998 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4F4812BFC7B9F00210998 /* SceneDelegate.swift */; };
 		EBF4F4842BFC7B9F00210998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4F4832BFC7B9F00210998 /* ViewController.swift */; };
 		EBF4F4872BFC7B9F00210998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF4F4852BFC7B9F00210998 /* Main.storyboard */; };
 		EBF4F4892BFC7BA600210998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF4F4882BFC7BA600210998 /* Assets.xcassets */; };
 		EBF4F48C2BFC7BA600210998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF4F48A2BFC7BA600210998 /* LaunchScreen.storyboard */; };
+		EBF4F4962BFC7BC900210998 /* Resolver.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF4F4952BFC7BC900210998 /* Resolver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBF4F47C2BFC7B9F00210998 /* NodeResolver-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NodeResolver-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF4F47F2BFC7B9F00210998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBF4F4812BFC7B9F00210998 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EBF4F4832BFC7B9F00210998 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBF4F4862BFC7B9F00210998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBF4F4882BFC7BA600210998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBF4F48B2BFC7BA600210998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBF4F48D2BFC7BA600210998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBF4F4932BFC7BC900210998 /* NodeResolver-Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NodeResolver-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		EBF4F4942BFC7BC900210998 /* Resolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resolver.h; sourceTree = "<group>"; };
+		EBF4F4952BFC7BC900210998 /* Resolver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Resolver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			children = (
 				EBF4F47E2BFC7B9F00210998 /* NodeResolver-Demo */,
 				EBF4F47D2BFC7B9F00210998 /* Products */,
+				EBF4F4932BFC7BC900210998 /* NodeResolver-Demo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +59,9 @@
 		EBF4F47E2BFC7B9F00210998 /* NodeResolver-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EBF4F4942BFC7BC900210998 /* Resolver.h */,
+				EBF4F4952BFC7BC900210998 /* Resolver.m */,
 				EBF4F47F2BFC7B9F00210998 /* AppDelegate.swift */,
-				EBF4F4812BFC7B9F00210998 /* SceneDelegate.swift */,
 				EBF4F4832BFC7B9F00210998 /* ViewController.swift */,
 				EBF4F4852BFC7B9F00210998 /* Main.storyboard */,
 				EBF4F4882BFC7BA600210998 /* Assets.xcassets */,
@@ -99,6 +103,7 @@
 				TargetAttributes = {
 					EBF4F47B2BFC7B9F00210998 = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -140,7 +145,7 @@
 			files = (
 				EBF4F4842BFC7B9F00210998 /* ViewController.swift in Sources */,
 				EBF4F4802BFC7B9F00210998 /* AppDelegate.swift in Sources */,
-				EBF4F4822BFC7B9F00210998 /* SceneDelegate.swift in Sources */,
+				EBF4F4962BFC7BC900210998 /* Resolver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -290,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HEUN8RQNTQ;
@@ -297,7 +303,6 @@
 				INFOPLIST_FILE = "NodeResolver-Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,6 +313,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.readboy.NodeResolver-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NodeResolver-Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HEUN8RQNTQ;
@@ -325,7 +333,6 @@
 				INFOPLIST_FILE = "NodeResolver-Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,6 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.readboy.NodeResolver-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NodeResolver-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
